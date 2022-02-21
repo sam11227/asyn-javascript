@@ -1,0 +1,56 @@
+.errorField {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.body {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.spinner {
+    position: relative;
+    height: 100px;
+    width: 100px;
+}
+
+.spinner div {
+    border: 10px solid transparent;
+    border-top-color: #ad60f5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: spiner 1.2s linear infinite;
+}
+
+.spinner div:nth-child(2) {
+    border: 10px solid transparent;
+    box-sizing: border-box;
+    border-bottom-color: #ad60f5;
+}
+
+@keyframes spiner {
+    0% {
+        transform: rotate(0deg);
+        border-width: 10px;
+    }
+    50% {
+        border-width: 1px;
+        transform: rotate(180deg);
+    }
+    100% {
+        border-width: 10px;
+        transform: rotate(360deg);
+    }
+}
